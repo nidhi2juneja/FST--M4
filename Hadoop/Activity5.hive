@@ -10,7 +10,7 @@ hive> LOAD DATA LOCAL INPATH
 hive> SELECT * FROM employee;
 hive> SELECT COUNT(*) FROM employee;
 #Exporting to HDFS directory
-hive> INSERT OVERWRITE DIRECTORY '/user/root/output/export'
+hive> INSERT OVERWRITE DIRECTORY '/user/nidhi/output/export'
     > ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
     > SELECT * FROM emp.employee;
 #Exporting to LOCAL directory
