@@ -1,0 +1,13 @@
+$ vim txtFile.txt
+
+$ vim csvFile.csv 
+
+$ hdfs dfs -mkdir /user/nidhi/textData
+
+$ hdfs dfs -put ./csvFile.csv /user/nidhi/textData
+
+$ hdfs dfs -put ./csvFile.csv /user/nidhi/textData
+
+# Use the stat command to get the file statistics
+$ hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/nidhi/textData/csvFile.csv
+$ hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/nidhi/textData/txtFile.txt

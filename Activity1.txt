@@ -1,0 +1,16 @@
+$ vim textFile.txt
+
+$ vim csvFile.csv 
+
+# Make a textData folder on the HDFS
+$ hdfs dfs -mkdir /user/root/textData
+
+# Move the TXT file, textFile.txt, into the textData folder in the HDFS
+$ hdfs dfs -moveFromLocal /root/textFile.txt /user/nidhi/textData
+
+# Move the CSV file, csvFile.csv, into the textData folder in the HDFS
+$ hdfs dfs -moveFromLocal /root/csvFile.csv /user/nidhi/textData
+
+# Use the stat command to get the file statistics
+$ hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/root/textData/textFile.txt
+$ hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/root/textData/csvFile.csv
